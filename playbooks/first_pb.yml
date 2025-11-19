@@ -1,9 +1,11 @@
 ---
 - name: First Basic PB
   hosts: all
-
+  become: true
   tasks:
-  - name: Test Connectivity
-    ping:
-  - name: "Print Output"
-    debug: msg="Alright!!"
+    - name: Test Connectivity
+      ping:
+
+    - name: Print Output
+      debug:
+        msg: "Alright!!"
