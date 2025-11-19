@@ -1,6 +1,7 @@
 ---
 - name: First Basic PB
-  hosts: all
+  hosts: localhost
+  connection: local
   become: true
   tasks:
     - name: Test Connectivity
